@@ -29,6 +29,8 @@ sudo yum install -y kubelet kubectl kubeadm
 # Configure hostname and /etc/hosts
 sudo hostnamectl set-hostname k8s-worker-node2
 echo "127.0.0.1 localhost k8s-worker-node2" | sudo tee -a /etc/hosts
+echo "172.24.200.205 k8s-worker-node1" | sudo tee -a /etc/hosts
+echo "172.24.200.201 k8s-master-node1" | sudo tee -a /etc/hosts
 
 # Disable swap
 sudo sed -i '/swap/d' /etc/fstab

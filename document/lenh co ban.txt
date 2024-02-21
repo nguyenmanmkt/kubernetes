@@ -1,4 +1,4 @@
 kubectl version
 kubectl cluster-info
 kubectl get node
- kubectl describe node/k8s-master-node1
+kubectl describe node/k8s-master-node1

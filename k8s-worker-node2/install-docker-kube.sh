@@ -76,8 +76,9 @@ curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/ca
 sudo kubectl apply -f calico.yaml
 
 # Check cluster status
-sudo kubectl get nodes
-sudo kubectl get pods --all-namespaces
+#sudo kubectl get nodes
+#sudo kubectl get pods --all-namespaces
 
 # Print join command for worker nodes
-sudo kubeadm token create --print-join-command
+#sudo kubeadm token create --print-join-command
+kubeadm join 172.24.200.201:6443 --token 6u398n.rg23g1uxip7sssgy --discovery-token-ca-cert-hash sha256:20882a6b3ea7f38b3122e705452c8566cada55077ccf35e0770a993eb745f6c3 --ignore-preflight-errors=FileContent--proc-sys-net-bridge-bridge-nf-call-iptables

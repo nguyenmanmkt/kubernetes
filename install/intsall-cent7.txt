@@ -23,7 +23,6 @@ sudo yum install -y kubelet kubectl kubeadm
 
 sudo hostnamectl set-hostname k8s-master-node1
 sudo nano /etc/hosts
-
 -->
 
 

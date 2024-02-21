@@ -1,3 +1,0 @@
-#main
-man
-man1

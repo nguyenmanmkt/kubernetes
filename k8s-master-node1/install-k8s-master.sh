@@ -76,6 +76,8 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && sudo chown $(id -u):
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
 sudo kubectl apply -f calico.yaml
 
+kubectl get pods -n kube-system
+
 # Check cluster status
 sudo kubectl get nodes
 sudo kubectl get pods --all-namespaces

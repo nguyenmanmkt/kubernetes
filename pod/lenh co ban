@@ -1,0 +1,1 @@
+kubectl exec -it grafana-5fbb5cd89b-r8sdw -- bash

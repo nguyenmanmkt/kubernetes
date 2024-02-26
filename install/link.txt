@@ -1,1 +1,7 @@
-curl 
+download:
+# master
+curl https://raw.githubusercontent.com/nguyenmanmkt/kubernetes/main/k8s-master-node1/install-k8s-master.sh 
+# worker node1
+curl https://raw.githubusercontent.com/nguyenmanmkt/kubernetes/main/k8s-worker-node1/install-k8s-worker1.sh
+# worker node 2
+curl https://raw.githubusercontent.com/nguyenmanmkt/kubernetes/main/k8s-worker-node2/install-k8s-worker2.sh

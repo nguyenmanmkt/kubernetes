@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Configure hostname and /etc/hosts
+sudo hostnamectl set-hostname k8s-master-node1
+echo "172.24.200.201 localhost k8s-master-node1 master1" | sudo tee -a /etc/hosts
+
 # Install dependencies
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -26,9 +30,6 @@ EOF
 # Install Kubernetes components
 sudo yum install -y kubelet kubectl kubeadm
 
-# Configure hostname and /etc/hosts
-sudo hostnamectl set-hostname k8s-master-node1
-echo "127.0.0.1 localhost k8s-master-node1" | sudo tee -a /etc/hosts
 
 # Disable swap
 sudo sed -i '/swap/d' /etc/fstab
